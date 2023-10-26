@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo"><a href="index.html">MyNews App</a></h1>
+        <div class="search-bar">
+            <input type="search" class="inputNews" placeholder="Search for news...">
+            <button class="getNews">Get News</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="newsInfo">
+            <!-- News content will be displayed here -->
+        </div>
+        <div class="imageOverlay">
+            <img class="enlargedImage" alt="Enlarged Image" onclick="hideEnlargedImage()">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    body {
+        background-size: 320% 320%; /* Adjust background size for smaller screens */
+    }
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 1024px) {
+    body {
+        background-size: 200% 200%; /* Adjust background size for larger screens */
+    }
+}
+.navbar {
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.inputNews {
+    width: 60%; /* Set the search bar width to 60% */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.getNews {
+    background-color: #47aaf7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 15px;
+    margin-left: 10px; /* Add space between search bar and button */
+}
+
+
+.getNews:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inputNews {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 10px; /* Add space between search bar and button on smaller screens */
+    }
+
+    .getNews {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+/* Add styling for news content and cards here */
+
+.imageOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.enlargedImage {
+    max-width: 80%;
+    max-height: 80%;
+    margin: 10% auto;
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
+
+/* Add more CSS styles for news cards and content as needed */
+/* Add styling for news content and cards here */
+.newsInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.newsCard {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.newsCard:hover {
+    transform: scale(1.05);
+}
+
+.newsCard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.newsTitle {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.newsDescription {
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles for News Content */
+@media (max-width: 768px) {
+    .newsInfo {
+        flex-direction: column;
+    }
+
+    .newsCard {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0; /* Remove margin between cards on smaller screens */
+    }
+
+    .newsCard img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Additional Styles for Larger Screens (if needed) */
+@media (min-width: 1024px) {
+    /* Add additional styles for larger screens if needed */
+}
